@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"Login view successfully loaded.");
 }
 
 - (void)didReceiveMemoryWarning {
