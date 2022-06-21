@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol ComposeTweetViewControllerDelegate
+- (void)didTweet:(Tweet *)tweet;
+
+@end
+
 @interface ComposeTweetViewController : UIViewController
+@property (nonatomic, weak) id<ComposeTweetViewControllerDelegate> delegate;
 
 @end
 
