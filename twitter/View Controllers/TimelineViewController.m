@@ -18,18 +18,13 @@
 @property (weak, nonatomic) IBOutlet UITableView *twitterFeedTableView;
 - (IBAction)didTapLogout:(id)sender;
 @property (strong, nonatomic) NSMutableArray* arrayOfTweets;
+@property (strong,nonatomic)  UIRefreshControl *refreshControl;
 
 @end
 
 @implementation TimelineViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.twitterFeedTableView.dataSource = self;
-    self.twitterFeedTableView.delegate = self;
-    
-    // Get timeline
+- (void)fetchTweets {
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSMutableArray *tweets, NSError *error) {
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
@@ -39,10 +34,26 @@
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
         }
+        // Tell the refreshControl to stop spinning
+        [self.refreshControl endRefreshing];
     }];
-    
-    
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // Initialize a UIRefreshControl
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchTweets) forControlEvents:UIControlEventValueChanged];
+    [self.twitterFeedTableView insertSubview:self.refreshControl atIndex:0];
+    
+    self.twitterFeedTableView.dataSource = self;
+    self.twitterFeedTableView.delegate = self;
+    
+    // Get timeline
+    [self fetchTweets];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
