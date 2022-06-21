@@ -189,6 +189,11 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="edit-icon" id="tNO-Rm-c0F">
+                            <connections>
+                                <segue destination="vPt-rc-45h" kind="presentation" id="atU-Oh-JJp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="twitterFeedTableView" destination="G9Y-E9-Y0c" id="zW8-T1-CgZ"/>
@@ -221,10 +226,10 @@
             <objects>
                 <viewController id="E7L-hf-kL8" customClass="ComposeTweetViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tqy-Rf-x2R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is a sample tweet!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LMG-X2-NGS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What's happening?" translatesAutoresizingMaskIntoConstraints="NO" id="LMG-X2-NGS">
                                 <rect key="frame" x="20" y="88" width="374" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -259,10 +264,10 @@
         <!--Navigation Controller-->
         <scene sceneID="fcW-nv-mqb">
             <objects>
-                <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="vPt-rc-45h" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vPt-rc-45h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rb5-3I-uBF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -278,6 +283,7 @@
     <resources>
         <image name="TwitterLogoBlue" width="200" height="200"/>
         <image name="close-icon" width="26" height="24"/>
+        <image name="edit-icon" width="30" height="27"/>
         <image name="favor-icon" width="30" height="30"/>
         <image name="reply-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
