@@ -257,7 +257,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="composeTweetMessage" destination="LMG-X2-NGS" id="xgB-kS-53D"/>
+                        <outlet property="composedTweetMessage" destination="LMG-X2-NGS" id="ZmY-gv-vYY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J29-Ih-zxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
