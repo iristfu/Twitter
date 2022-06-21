@@ -49,6 +49,7 @@
     
     self.twitterFeedTableView.dataSource = self;
     self.twitterFeedTableView.delegate = self;
+    self.twitterFeedTableView.rowHeight = UITableViewAutomaticDimension;
     
     // Get timeline
     [self fetchTweets];
