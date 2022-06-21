@@ -93,6 +93,7 @@
     // set other metadata for tweet
     tweetCell.screenName.text = tweet.user.name;
     tweetCell.tweetText.text = tweet.text;
+    NSLog(@"The tweet text should be: %@", tweet.text);
     tweetCell.userName.text = [NSString stringWithFormat:@"@%@", tweet.user.screenName];
     tweetCell.datePosted.text = tweet.createdAtString;
     [tweetCell.replyButton setTitle:[NSString stringWithFormat:@"%d", tweet.replyCount] forState:UIControlStateNormal];
