@@ -34,11 +34,8 @@
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
             self.arrayOfTweets = tweets;
-            for (NSDictionary *dictionary in tweets) {
-                NSString *text = dictionary[@"text"];
-                NSLog(@"%@", text);
+            NSLog(@"Here is the arrray of tweets: %@", self.arrayOfTweets);
             [self.twitterFeedTableView reloadData];
-            }
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
         }
@@ -74,17 +71,19 @@
 }
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     Tweet *tweet = self.arrayOfTweets[indexPath.row];
-    TweetCell *tweetCell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell"];
+    TweetCell *tweetCell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell" forIndexPath:indexPath];
     tweetCell.tweet = tweet;
     // set tweet profile picture
     NSString *URLString = tweet.user.profilePicture;
     NSURL *url = [NSURL URLWithString:URLString];
     [tweetCell.profilePicture setImageWithURL:url];
+    
     // set other metadata for tweet
     tweetCell.screenName.text = tweet.user.name;
     tweetCell.tweetText.text = tweet.text;
     tweetCell.userName.text = [NSString stringWithFormat:@"@%@", tweet.user.screenName];
     tweetCell.datePosted.text = tweet.createdAtString;
+    [tweetCell.replyButton setTitle:[NSString stringWithFormat:@"%d", tweet.replyCount] forState:UIControlStateNormal];
     [tweetCell.favoriteButton setTitle:[NSString stringWithFormat:@"%d",tweet.favoriteCount] forState:UIControlStateNormal];
     [tweetCell.retweetButton setTitle:[NSString stringWithFormat:@"%d", tweet.retweetCount] forState:UIControlStateNormal];
     
