@@ -39,6 +39,7 @@
             NSLog(@"Encountered error posting tweet: %@", error.localizedDescription);
         } else {
             NSLog(@"Successfully tweeted: %@", self.composedTweetMessage.text);
+            [self.delegate didTweet:newTweet];
             [self dismissViewControllerAnimated:true completion:nil];
         }
     }];
