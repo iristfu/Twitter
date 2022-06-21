@@ -20,6 +20,7 @@
 		7B465090286114D50084930D /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B46508F286114D50084930D /* Keys.plist */; };
 		7B4650932861289A0084930D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4650922861289A0084930D /* User.m */; };
 		7B4650962861291B0084930D /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4650952861291B0084930D /* Tweet.m */; };
+		7B465099286143410084930D /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B465098286143410084930D /* TweetCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		7B4650922861289A0084930D /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		7B4650942861291B0084930D /* Tweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		7B4650952861291B0084930D /* Tweet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		7B465097286143410084930D /* TweetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
+		7B465098286143410084930D /* TweetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 		6AD278FF20BCBF280085BC29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7B465097286143410084930D /* TweetCell.h */,
+				7B465098286143410084930D /* TweetCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B465099286143410084930D /* TweetCell.m in Sources */,
 				6AD278F320BCA6020085BC29 /* BDBOAuth1SessionManager+SFAuthenticationSession.m in Sources */,
 				7B4650932861289A0084930D /* User.m in Sources */,
 				6AD278E820BC4B970085BC29 /* main.m in Sources */,
