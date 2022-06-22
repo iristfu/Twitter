@@ -382,8 +382,10 @@
                     <navigationItem key="navigationItem" id="7Xv-po-d4Q"/>
                     <connections>
                         <outlet property="datePosted" destination="qhW-FB-dFf" id="f7P-qx-bDY"/>
+                        <outlet property="favoriteButton" destination="vHg-yf-hga" id="4IU-LD-wc4"/>
                         <outlet property="likesCount" destination="G3z-4Z-gd6" id="LOk-0Z-0Cf"/>
                         <outlet property="profilePicture" destination="8iz-cF-Pon" id="u1o-fE-HMt"/>
+                        <outlet property="retweetButton" destination="dDF-7w-cSm" id="cPh-P0-PSj"/>
                         <outlet property="retweetsCount" destination="BcE-7j-1ru" id="yqn-Bi-GQb"/>
                         <outlet property="screenName" destination="I5A-Lj-RPG" id="UUA-fj-hcC"/>
                         <outlet property="tweetText" destination="hfp-Uf-6s4" id="Fa2-eV-lAO"/>
