@@ -55,7 +55,6 @@
         formatter.timeStyle = NSDateFormatterNoStyle;
         // Convert Date to String
         self.createdAtString = date.shortTimeAgoSinceNow;
-//        self.createdAtString = [formatter stringFromDate:date];
     }
     return self;
 }
