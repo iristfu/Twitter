@@ -109,7 +109,7 @@
     tweetCell.tweetText.text = tweet.text;
     NSLog(@"The tweet text should be: %@", tweet.text);
     tweetCell.userName.text = [NSString stringWithFormat:@"@%@", tweet.user.screenName];
-    tweetCell.datePosted.text = tweet.createdAtString;
+    tweetCell.datePosted.text = tweet.createdAtSinceNowString;
     [tweetCell.replyButton setTitle:[NSString stringWithFormat:@"%d", tweet.replyCount] forState:UIControlStateNormal];
     [tweetCell.favoriteButton setTitle:[NSString stringWithFormat:@"%d",tweet.favoriteCount] forState:UIControlStateNormal];
     [tweetCell.retweetButton setTitle:[NSString stringWithFormat:@"%d", tweet.retweetCount] forState:UIControlStateNormal];
