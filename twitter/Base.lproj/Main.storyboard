@@ -144,6 +144,9 @@
                                                             <state key="highlighted" image="favor-icon-red">
                                                                 <color key="titleColor" systemColor="linkColor"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="didTapFavorite:" destination="6mL-84-Gp9" eventType="touchUpInside" id="1XU-8x-Vaw"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
