@@ -267,13 +267,13 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tweet Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfp-Uf-6s4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweet Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfp-Uf-6s4">
                                                 <rect key="frame" x="20" y="128" width="371" height="82"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date Posted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-FB-dFf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" text="Date Posted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhW-FB-dFf">
                                                 <rect key="frame" x="20" y="227" width="103" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -375,6 +375,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="hfp-Uf-6s4" firstAttribute="top" secondItem="8iz-cF-Pon" secondAttribute="bottom" constant="20" id="2gQ-gp-2lp"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hfp-Uf-6s4" secondAttribute="bottom" constant="20" id="45n-mo-Ixx"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I5A-Lj-RPG" secondAttribute="trailing" constant="20" id="4GD-FI-XJD"/>
                                             <constraint firstItem="8iz-cF-Pon" firstAttribute="leading" secondItem="waU-iu-Ko2" secondAttribute="leading" constant="20" id="4je-xw-sDR"/>
                                             <constraint firstItem="I5A-Lj-RPG" firstAttribute="leading" secondItem="8iz-cF-Pon" secondAttribute="trailing" constant="20" id="4o3-ph-V5z"/>
@@ -391,7 +392,7 @@
                                             <constraint firstItem="6pG-7G-q46" firstAttribute="top" secondItem="I5A-Lj-RPG" secondAttribute="bottom" constant="10" id="g8h-Ri-Pst"/>
                                             <constraint firstItem="hfp-Uf-6s4" firstAttribute="leading" secondItem="8iz-cF-Pon" secondAttribute="leading" id="k3v-EZ-Lir"/>
                                             <constraint firstItem="6pG-7G-q46" firstAttribute="trailing" secondItem="I5A-Lj-RPG" secondAttribute="trailing" id="nsW-Ye-a0n"/>
-                                            <constraint firstItem="qhW-FB-dFf" firstAttribute="top" secondItem="hfp-Uf-6s4" secondAttribute="bottom" constant="20" id="pMj-W0-c2b"/>
+                                            <constraint firstItem="qhW-FB-dFf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hfp-Uf-6s4" secondAttribute="bottom" constant="20" id="pMj-W0-c2b"/>
                                             <constraint firstItem="j8R-ir-ho5" firstAttribute="top" secondItem="qhW-FB-dFf" secondAttribute="bottom" constant="20" id="pXv-zK-tR5"/>
                                             <constraint firstItem="j8R-ir-ho5" firstAttribute="leading" secondItem="qhW-FB-dFf" secondAttribute="leading" id="qdI-0Z-beR"/>
                                             <constraint firstItem="qhW-FB-dFf" firstAttribute="trailing" secondItem="hfp-Uf-6s4" secondAttribute="trailing" id="vR4-PA-XsU"/>
