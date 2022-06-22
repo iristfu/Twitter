@@ -113,32 +113,53 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO9-p4-ThZ">
                                                     <rect key="frame" x="65" y="125" width="344" height="20"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JP8-eb-SFE">
-                                                            <rect key="frame" x="0.0" y="-12" width="77" height="44"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="reply-icon" title="127"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JP8-eb-SFE">
+                                                            <rect key="frame" x="0.0" y="-5" width="53" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="127" image="reply-icon">
+                                                                <color key="titleColor" systemColor="linkColor"/>
+                                                            </state>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxo-HG-iKT">
-                                                            <rect key="frame" x="87" y="-12" width="77" height="44"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="retweet-icon" title="127"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxo-HG-iKT">
+                                                            <rect key="frame" x="73" y="-5" width="53" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="127" image="retweet-icon">
+                                                                <color key="titleColor" systemColor="linkColor"/>
+                                                            </state>
+                                                            <state key="selected" image="retweet-icon-green"/>
+                                                            <state key="highlighted" image="retweet-icon-green"/>
+                                                            <connections>
+                                                                <action selector="didTapRetweet:" destination="6mL-84-Gp9" eventType="touchUpInside" id="cLJ-7X-SdK"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHP-Ea-tm2">
-                                                            <rect key="frame" x="174" y="-12" width="77" height="44"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="favor-icon" title="127"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHP-Ea-tm2">
+                                                            <rect key="frame" x="146" y="-5" width="53" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="127" image="favor-icon">
+                                                                <color key="titleColor" systemColor="linkColor"/>
+                                                            </state>
+                                                            <state key="selected" image="favor-icon-red"/>
+                                                            <state key="highlighted" image="favor-icon-red">
+                                                                <color key="titleColor" systemColor="linkColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="didTapFavorite:" destination="6mL-84-Gp9" eventType="touchUpInside" id="1XU-8x-Vaw"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Dxo-HG-iKT" firstAttribute="centerY" secondItem="JO9-p4-ThZ" secondAttribute="centerY" id="80F-ip-ufx"/>
-                                                        <constraint firstAttribute="trailing" secondItem="nHP-Ea-tm2" secondAttribute="trailing" constant="93" id="9WY-pp-TIz"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nHP-Ea-tm2" secondAttribute="trailing" constant="20" id="9WY-pp-TIz"/>
                                                         <constraint firstItem="JP8-eb-SFE" firstAttribute="centerY" secondItem="JO9-p4-ThZ" secondAttribute="centerY" id="E8a-GP-N0q"/>
                                                         <constraint firstAttribute="height" constant="20" id="Y9u-3N-SVh"/>
                                                         <constraint firstItem="nHP-Ea-tm2" firstAttribute="centerY" secondItem="JO9-p4-ThZ" secondAttribute="centerY" id="Yj7-Ud-uM1"/>
                                                         <constraint firstItem="JP8-eb-SFE" firstAttribute="leading" secondItem="JO9-p4-ThZ" secondAttribute="leading" id="gIB-mQ-IuT"/>
-                                                        <constraint firstItem="Dxo-HG-iKT" firstAttribute="leading" secondItem="JP8-eb-SFE" secondAttribute="trailing" constant="10" id="lMa-ZF-d4I"/>
-                                                        <constraint firstItem="nHP-Ea-tm2" firstAttribute="leading" secondItem="Dxo-HG-iKT" secondAttribute="trailing" constant="10" id="nkp-bY-wB5"/>
+                                                        <constraint firstItem="Dxo-HG-iKT" firstAttribute="leading" secondItem="JP8-eb-SFE" secondAttribute="trailing" constant="20" id="lMa-ZF-d4I"/>
+                                                        <constraint firstItem="nHP-Ea-tm2" firstAttribute="leading" secondItem="Dxo-HG-iKT" secondAttribute="trailing" constant="20" id="nkp-bY-wB5"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -288,10 +309,15 @@
         <image name="close-icon" width="26" height="24"/>
         <image name="edit-icon" width="30" height="27"/>
         <image name="favor-icon" width="30" height="30"/>
+        <image name="favor-icon-red" width="30" height="30"/>
         <image name="reply-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
+        <image name="retweet-icon-green" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
