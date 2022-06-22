@@ -14,6 +14,7 @@
 #import "Tweet.h"
 #import "UIImageView+AFNetworking.h"
 #import "ComposeTweetViewController.h"
+#import "TweetDetailsViewController.h"
 
 @interface TimelineViewController () <ComposeTweetViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *twitterFeedTableView;
@@ -66,9 +67,20 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   UINavigationController *navigationController = [segue destinationViewController];
-   ComposeTweetViewController *composeTweetController = (ComposeTweetViewController*)navigationController.topViewController;
-   composeTweetController.delegate = self;
+    if ([[segue identifier] isEqualToString:@"SegueToDetailsView"]) {
+        // get the tweet that triggered the details view segue
+        UITableViewCell *tappedTweetCell = sender;
+        NSIndexPath *indexPathForTappedTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
+        Tweet *tappedTweet = self.arrayOfTweets[indexPathForTappedTweet.row];
+        
+        // send the tweet to the details view controller
+        TweetDetailsViewController *tweetDetailsViewController = [segue destinationViewController];
+        tweetDetailsViewController.tweet = tappedTweet;
+    } else {
+        UINavigationController *navigationController = [segue destinationViewController];
+        ComposeTweetViewController *composeTweetViewController = (ComposeTweetViewController*)navigationController.topViewController;
+        composeTweetViewController.delegate = self;
+    }
 }
 
 
