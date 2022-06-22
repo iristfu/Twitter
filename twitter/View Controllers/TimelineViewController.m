@@ -90,6 +90,7 @@
     NSString *URLString = tweet.user.profilePicture;
     NSURL *url = [NSURL URLWithString:URLString];
     [tweetCell.profilePicture setImageWithURL:url];
+    tweetCell.profilePicture.layer.cornerRadius = tweetCell.profilePicture.frame.size.width / 2;
     
     // set other metadata for tweet
     tweetCell.screenName.text = tweet.user.name;
