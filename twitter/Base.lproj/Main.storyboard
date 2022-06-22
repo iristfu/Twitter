@@ -192,6 +192,7 @@
                                             <outlet property="screenName" destination="HZB-Vh-w2v" id="8Uy-iJ-HmT"/>
                                             <outlet property="tweetText" destination="RlD-Dx-qwx" id="QAy-78-66h"/>
                                             <outlet property="userName" destination="sSB-wM-27e" id="fh9-uW-tFc"/>
+                                            <segue destination="3ys-Jy-o3r" kind="show" id="DJa-AS-Yxk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -231,6 +232,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQh-hN-GQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1659.4202898550725" y="36.160714285714285"/>
+        </scene>
+        <!--Tweet Details View Controller-->
+        <scene sceneID="HlR-RT-LjN">
+            <objects>
+                <viewController id="3ys-Jy-o3r" customClass="TweetDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZP6-t9-VPN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DP8-cx-htN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Xv-po-d4Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mi-T7-asx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WUT-Ke-VeR">
