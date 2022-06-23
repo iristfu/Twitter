@@ -39,6 +39,7 @@
     self.screenName.text = self.user.screenName;
     self.userName.text = self.user.name;
     self.bio.text = self.user.bio;
+    
     NSLog(@"Successfully got everything before the count labels");
     NSLog(@"Printing the follower count %@", self.user.followerCount);
     self.followerCount.text = self.user.followerCount;

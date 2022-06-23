@@ -120,12 +120,7 @@
         composeTweetViewController.delegate = self;
     } else if ([[segue identifier] isEqualToString:@"ProfileSegue"]) {
         ProfileViewController *profileViewController = [segue destinationViewController];
-        
-        // get the user
-        TweetCell *tappedTweetCell = sender;
-        NSIndexPath *indexPathForTappedTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
-        Tweet *tappedTweet = self.arrayOfTweets[indexPathForTappedTweet.row];
-        profileViewController.user = tappedTweet.user;
+        profileViewController.user = sender;
     }
 }
 
