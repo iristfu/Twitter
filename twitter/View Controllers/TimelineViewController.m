@@ -76,7 +76,20 @@
         // send the tweet to the details view controller
         TweetDetailsViewController *tweetDetailsViewController = [segue destinationViewController];
         tweetDetailsViewController.tweet = tappedTweet;
-    } else {
+    } else if ([[segue identifier] isEqualToString:@"SegueFromTweetCellToReply"]) {
+        // get the tweet to respond to
+        UITableViewCell *tappedTweetCell = [[sender superview] superview];
+        NSIndexPath *indexPathForOriginalTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
+        Tweet *originalTweet = self.arrayOfTweets[indexPathForOriginalTweet.row];
+        
+        // set up the segue to compose view controller
+        UINavigationController *navigationController = [segue destinationViewController];
+        ComposeTweetViewController *composeTweetViewController = (ComposeTweetViewController*)navigationController.topViewController;
+        composeTweetViewController.originalTweet = originalTweet;
+        composeTweetViewController.delegate = self;
+        
+    }
+    else { // compose new tweet
         UINavigationController *navigationController = [segue destinationViewController];
         ComposeTweetViewController *composeTweetViewController = (ComposeTweetViewController*)navigationController.topViewController;
         composeTweetViewController.delegate = self;

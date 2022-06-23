@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ComposeTweetViewController : UIViewController
 @property (nonatomic, weak) id<ComposeTweetViewControllerDelegate> delegate;
+@property (nonatomic, weak) Tweet *originalTweet;
 
 @end
 

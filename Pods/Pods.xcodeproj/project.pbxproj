@@ -137,7 +137,7 @@
 		5C5C76451AAC410A4D34A6807FD144CD /* Pods-twitter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-twitter-acknowledgements.plist"; sourceTree = "<group>"; };
 		5C7E723620F84B77E7EC055CA85201ED /* AFNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.release.xcconfig; sourceTree = "<group>"; };
 		5EFA3D23828F43B2457B2EFA63538C6D /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateTools/DateTools/DateTools.bundle; sourceTree = "<group>"; };
-		649872BC6849ACBA4FD431721D67286E /* RSKPlaceholderTextView */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = RSKPlaceholderTextView; path = libRSKPlaceholderTextView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		649872BC6849ACBA4FD431721D67286E /* libRSKPlaceholderTextView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSKPlaceholderTextView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		659D1D16083AFF3F2C5457D1D027FD68 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
 		659E8EA545CF3FE037B2BAD6A62EF105 /* Pods-twitter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-twitter-resources.sh"; sourceTree = "<group>"; };
 		7402F4DE2368659FA77F1DF3AC458B97 /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DateTools/DTError.m; sourceTree = "<group>"; };
@@ -154,11 +154,11 @@
 		8F634CA767E1E0D5A66ABC4536A6140B /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
 		8FBC9F1AAB2B2E862599679763677125 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		9060F29ED075E2A19A1161B60E7F6ED9 /* BDBOAuth1Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BDBOAuth1Manager.release.xcconfig; sourceTree = "<group>"; };
-		926EC5299D418AC972A4778A1AA72CFA /* Pods-twitter */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-twitter"; path = "libPods-twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		926EC5299D418AC972A4778A1AA72CFA /* libPods-twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A47C6715502351574070A38AC917AF9 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		9ACBCCB7BEAE0115EC7345A697599443 /* RSKPlaceholderTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RSKPlaceholderTextView.modulemap; sourceTree = "<group>"; };
 		9CFD6449A741688FBA5E1ACC193E70EB /* Pods-twitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-twitter-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1625BA05258821151F2FC3AC04926B2 /* NSString+BDBOAuth1Manager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+BDBOAuth1Manager.m"; path = "BDBOAuth1Manager/Categories/NSString+BDBOAuth1Manager.m"; sourceTree = "<group>"; };
 		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AFNetworking; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7602BF8B4345D8ED1675AA1A74B6C /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
@@ -249,8 +249,8 @@
 				A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */,
 				2D409645D088AB9189F3E7CD44A1CCFA /* BDBOAuth1Manager */,
 				4AF171581392AD234F23BE913F0C22FE /* DateTools */,
-				926EC5299D418AC972A4778A1AA72CFA /* Pods-twitter */,
-				649872BC6849ACBA4FD431721D67286E /* RSKPlaceholderTextView */,
+				926EC5299D418AC972A4778A1AA72CFA /* libPods-twitter.a */,
+				649872BC6849ACBA4FD431721D67286E /* libRSKPlaceholderTextView.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,7 +297,6 @@
 				C0C562DD4B8820F105F1AF74AFE0336E /* Resources */,
 				7B0461D0C55508D1AABF6EB78F7C76A3 /* Support Files */,
 			);
-			name = DateTools;
 			path = DateTools;
 			sourceTree = "<group>";
 		};
@@ -321,7 +320,6 @@
 				22BE7AB7B831C941B9F75970AAB7AE6D /* Support Files */,
 				B6AEE94DD98CF8102F48F81F51624C5B /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -370,7 +368,6 @@
 				B356746571C1E3A095B16B52BE110D82 /* RSKPlaceholderTextView.swift */,
 				B9DBD1015A22AF4854D5F99E924D8B33 /* Support Files */,
 			);
-			name = RSKPlaceholderTextView;
 			path = RSKPlaceholderTextView;
 			sourceTree = "<group>";
 		};
@@ -496,7 +493,6 @@
 				A1625BA05258821151F2FC3AC04926B2 /* NSString+BDBOAuth1Manager.m */,
 				B4443994424022957292E6B366F27B32 /* Support Files */,
 			);
-			name = BDBOAuth1Manager;
 			path = BDBOAuth1Manager;
 			sourceTree = "<group>";
 		};
@@ -640,7 +636,7 @@
 			);
 			name = RSKPlaceholderTextView;
 			productName = RSKPlaceholderTextView;
-			productReference = 649872BC6849ACBA4FD431721D67286E /* RSKPlaceholderTextView */;
+			productReference = 649872BC6849ACBA4FD431721D67286E /* libRSKPlaceholderTextView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		F546B5A2AE64512B48C9DCCFF2BD56FC /* Pods-twitter */ = {
@@ -661,7 +657,7 @@
 			);
 			name = "Pods-twitter";
 			productName = "Pods-twitter";
-			productReference = 926EC5299D418AC972A4778A1AA72CFA /* Pods-twitter */;
+			productReference = 926EC5299D418AC972A4778A1AA72CFA /* libPods-twitter.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
