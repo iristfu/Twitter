@@ -36,8 +36,8 @@
     NSURL *headerURL = [NSURL URLWithString:headerURLString];
     [self.headerPicture setImageWithURL:headerURL];
     
-    self.screenName.text = self.user.screenName;
-    self.userName.text = self.user.name;
+    self.screenName.text = self.user.name;
+    self.userName.text = [NSString stringWithFormat:@"@%@", self.user.screenName]; // I messed the naming up lol; fix later
     self.bio.text = self.user.bio;
     
     NSLog(@"Successfully got everything before the count labels");
