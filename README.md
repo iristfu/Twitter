@@ -71,7 +71,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Working with the Twitter API was quite challenging, especially in the beginning when my API key and secret were not working. It was also a learning curve to read the documentation and apply the correct request endpoints accordingly.
+Working with the Twitter API was quite challenging, especially in the beginning when my API key and secret were not working. It was also a learning curve to read the documentation and apply the correct request endpoints accordingly. Furthermore, I think I got a lot better at using autolayout thorugh this project. I now feel more comfortable getting a UI to look exactly the way I want it to and be compatible with multiple devices and orientations. 
 
 ## Credits
 
