@@ -45,8 +45,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. I'd like to learn about how we can have an infinite scroll on the home feed. I couldn't think of an elegant solution to continuously load older data as the user keeps scrolling down the home feed.
+2. My reply button is quite janky right now. I'd like to discuss better ways to implement the reply feature.
 
 ## Video Walkthrough
 
@@ -71,7 +71,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Working with the Twitter API was quite challenging, especially in the beginning when my API key and secret were not working. It was also a learning curve to read the documentation and apply the correct request endpoints accordingly.
 
 ## Credits
 
