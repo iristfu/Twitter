@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TweetCell.h"
 
-@interface TimelineViewController : UIViewController
+@interface TimelineViewController : UIViewController<TweetCellDelegate>
+
+- (void)tweetCell:(TweetCell *)tweetCell didTap:(User *)user;
 
 @end

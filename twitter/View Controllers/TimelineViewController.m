@@ -15,6 +15,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "ComposeTweetViewController.h"
 #import "TweetDetailsViewController.h"
+#import "ProfileViewController.h"
 
 @interface TimelineViewController () <ComposeTweetViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *twitterFeedTableView;
@@ -113,11 +114,18 @@
         composeTweetViewController.originalTweet = originalTweet;
         composeTweetViewController.delegate = self;
         
-    }
-    else { // compose new tweet
+    } else if ([[segue identifier] isEqualToString:@"ComposeSegue"]) { // compose new tweet
         UINavigationController *navigationController = [segue destinationViewController];
         ComposeTweetViewController *composeTweetViewController = (ComposeTweetViewController*)navigationController.topViewController;
         composeTweetViewController.delegate = self;
+    } else if ([[segue identifier] isEqualToString:@"ProfileSegue"]) {
+        ProfileViewController *profileViewController = [segue destinationViewController];
+        
+        // get the user
+        TweetCell *tappedTweetCell = sender;
+        NSIndexPath *indexPathForTappedTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
+        Tweet *tappedTweet = self.arrayOfTweets[indexPathForTappedTweet.row];
+        profileViewController.user = tappedTweet.user;
     }
 }
 
@@ -135,6 +143,7 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     Tweet *tweet = self.arrayOfTweets[indexPath.row];
     TweetCell *tweetCell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell" forIndexPath:indexPath];
+    tweetCell.delegate = self;
     tweetCell.tweet = tweet;
     // set tweet profile picture
     NSString *URLString = tweet.user.profilePicture;
@@ -163,6 +172,11 @@
 - (void)didTweet:(nonnull Tweet *)tweet {
     [self.arrayOfTweets insertObject:tweet atIndex:0];
     [self.twitterFeedTableView reloadData];
+}
+
+- (void)tweetCell:(TweetCell *)tweetCell didTap:(User *)user {
+    // Perform segue to profile view controller
+    [self performSegueWithIdentifier:@"ProfileSegue" sender:user];
 }
 
 @end

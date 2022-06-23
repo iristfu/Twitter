@@ -225,12 +225,13 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="edit-icon" id="tNO-Rm-c0F">
                             <connections>
-                                <segue destination="vPt-rc-45h" kind="presentation" id="atU-Oh-JJp"/>
+                                <segue destination="vPt-rc-45h" kind="presentation" identifier="ComposeSegue" id="atU-Oh-JJp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="twitterFeedTableView" destination="G9Y-E9-Y0c" id="zW8-T1-CgZ"/>
+                        <segue destination="3QD-We-Qs6" kind="show" identifier="ProfileSegue" id="tix-ZL-WL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQh-hN-GQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,6 +445,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mi-T7-asx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2411.594202898551" y="35.491071428571423"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="I5f-50-1dY">
+            <objects>
+                <viewController id="3QD-We-Qs6" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ua9-4A-CAS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="f5k-W2-sZU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kTs-ia-kHo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sjv-Ft-Yww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3188" y="47"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WUT-Ke-VeR">
