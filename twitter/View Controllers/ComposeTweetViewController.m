@@ -9,6 +9,7 @@
 #import "ComposeTweetViewController.h"
 #import "APIManager.h"
 #import "RSKPlaceholderTextView/RSKPlaceholderTextView-umbrella.h"
+#import "TweetCell.h"
 
 @interface ComposeTweetViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *replyingToLabel;

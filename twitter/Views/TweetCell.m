@@ -86,4 +86,17 @@
     [self.retweetButton setSelected:self.tweet.retweeted];
 }
 
+- (IBAction)didTapReply:(id)sender {
+    self.tweet.replyCount++;
+    self.tweet.replied = true;
+    // refresh UI
+    [self refreshReplyData];
+}
+
+- (void)refreshReplyData {
+    [self.replyButton setTitle:[NSString stringWithFormat:@"%d", self.tweet.replyCount] forState:UIControlStateNormal];
+    [self.replyButton setSelected:self.tweet.replied];
+}
+
+
 @end

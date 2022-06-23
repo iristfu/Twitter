@@ -69,7 +69,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"SegueToDetailsView"]) {
         // get the tweet that triggered the details view segue
-        UITableViewCell *tappedTweetCell = sender;
+        TweetCell *tappedTweetCell = sender;
         NSIndexPath *indexPathForTappedTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
         Tweet *tappedTweet = self.arrayOfTweets[indexPathForTappedTweet.row];
         
@@ -78,7 +78,7 @@
         tweetDetailsViewController.tweet = tappedTweet;
     } else if ([[segue identifier] isEqualToString:@"SegueFromTweetCellToReply"]) {
         // get the tweet to respond to
-        UITableViewCell *tappedTweetCell = [[sender superview] superview];
+        TweetCell *tappedTweetCell = [[sender superview] superview];
         NSIndexPath *indexPathForOriginalTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
         Tweet *originalTweet = self.arrayOfTweets[indexPathForOriginalTweet.row];
         

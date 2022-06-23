@@ -33,6 +33,9 @@
                self.text = dictionary[@"text"]; // fallback to regular text that Twitter API provided
            }
         
+        self.replyCount = [dictionary[@"reply_count"] intValue];
+        self.replied = [dictionary[@"reply_count"] boolValue];
+        
         self.favoriteCount = [dictionary[@"favorite_count"] intValue];
         self.favorited = [dictionary[@"favorited"] boolValue];
         self.retweetCount = [dictionary[@"retweet_count"] intValue];

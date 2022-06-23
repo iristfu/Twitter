@@ -120,6 +120,7 @@
                                                                 <color key="titleColor" systemColor="linkColor"/>
                                                             </state>
                                                             <connections>
+                                                                <action selector="didTapReply:" destination="6mL-84-Gp9" eventType="touchUpInside" id="r7W-Le-Wa1"/>
                                                                 <segue destination="vPt-rc-45h" kind="presentation" identifier="SegueFromTweetCellToReply" id="26w-fO-tbN"/>
                                                             </connections>
                                                         </button>
