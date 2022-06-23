@@ -47,12 +47,30 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="FTQ-G1-N2b" kind="presentation" identifier="loginSegue" id="CHf-4w-b5m"/>
+                        <segue destination="oJq-yJ-QIo" kind="presentation" identifier="loginSegue" id="XJb-5u-rcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKJ-HH-8tn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="-81" y="-927"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3Wj-mn-dEs">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="oJq-yJ-QIo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S5o-kq-pDS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FTQ-G1-N2b" kind="relationship" relationship="viewControllers" id="w3k-80-zU2"/>
+                        <segue destination="bGu-2m-Qf3" kind="relationship" relationship="viewControllers" id="d2e-P3-0Gp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6t-vV-4ce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="-927"/>
         </scene>
         <!--Home Timeline-->
         <scene sceneID="1Tv-nE-1AW">
@@ -67,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G9Y-E9-Y0c">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="150" id="6mL-84-Gp9" customClass="TweetCell">
@@ -236,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQh-hN-GQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659.4202898550725" y="36.160714285714285"/>
+            <point key="canvasLocation" x="-720" y="652"/>
         </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="HlR-RT-LjN">
@@ -247,7 +265,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZO-Bw-6ZP">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="757"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waU-iu-Ko2" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -444,7 +462,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mi-T7-asx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2411.594202898551" y="35.491071428571423"/>
+            <point key="canvasLocation" x="-1909" y="652"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4df-P4-QYQ">
+            <objects>
+                <navigationController id="bGu-2m-Qf3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile-Icon" id="ZWm-sk-xfd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2R-ri-QZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3QD-We-Qs6" kind="relationship" relationship="rootViewController" id="X9A-xq-dIc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2c-71-6pq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2558" y="-101"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="I5f-50-1dY">
@@ -574,12 +609,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjv-Ft-Yww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3186.9565217391305" y="46.875"/>
+            <point key="canvasLocation" x="2558" y="652"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WUT-Ke-VeR">
             <objects>
                 <navigationController storyboardIdentifier="TweetsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="FTQ-G1-N2b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home-icon" id="XfD-ha-lFP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ytz-Ev-cUB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -592,7 +628,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHS-35-jFs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-719" y="-101"/>
         </scene>
         <!--Compose Tweet View Controller-->
         <scene sceneID="wWQ-fe-Rnb">
@@ -660,7 +696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J29-Ih-zxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.9710144927537" y="722.54464285714278"/>
+            <point key="canvasLocation" x="742" y="1625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fcW-nv-mqb">
@@ -679,11 +715,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOt-sq-l73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859" y="723"/>
+            <point key="canvasLocation" x="-720" y="1625"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hgS-Ft-8eh"/>
+        <segue reference="26w-fO-tbN"/>
+        <segue reference="tix-ZL-WL8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="TwitterLogoBlue" width="200" height="200"/>
@@ -691,6 +728,8 @@
         <image name="edit-icon" width="30" height="27"/>
         <image name="favor-icon" width="30" height="30"/>
         <image name="favor-icon-red" width="30" height="30"/>
+        <image name="home-icon" width="30" height="30"/>
+        <image name="profile-Icon" width="26" height="26"/>
         <image name="reply-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
         <image name="retweet-icon-green" width="30" height="30"/>
