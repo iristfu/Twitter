@@ -52,26 +52,32 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-Icon, launchscreen, login, feed
+**Icon, launchscreen, login, feed**
 
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-1.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
-Feed refresh, like/unlike, retweet/unretweet, logout
+**Feed refresh, like/unlike, retweet/unretweet, logout**
+
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-2.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
-Composing
+**Composing**
+
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-6.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
-Replying
+**Replying**
+
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-3.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
-Various orientations on different views
+**Various orientations on different views**
+
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-5.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
-Infinite scrolling
+**Infinite scrolling**
+
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-infinite-scroll.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
-Click on a Profile image to reveal another user's profile
+**Click on a Profile image to reveal another user's profile**
+
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-7-profile-view.gif' title='Icon, launchscreen, login, feed' width='400' alt='Icon, launchscreen, login, feed' />
 
 
