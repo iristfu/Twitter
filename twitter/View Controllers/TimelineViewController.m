@@ -78,7 +78,7 @@
         tweetDetailsViewController.tweet = tappedTweet;
     } else if ([[segue identifier] isEqualToString:@"SegueFromTweetCellToReply"]) {
         // get the tweet to respond to
-        TweetCell *tappedTweetCell = [[sender superview] superview];
+        TweetCell *tappedTweetCell = sender;
         NSIndexPath *indexPathForOriginalTweet = [self.twitterFeedTableView indexPathForCell:tappedTweetCell];
         Tweet *originalTweet = self.arrayOfTweets[indexPathForOriginalTweet.row];
         
