@@ -8,9 +8,11 @@
 
 #import "ComposeTweetViewController.h"
 #import "APIManager.h"
+#import "RSKPlaceholderTextView/RSKPlaceholderTextView-umbrella.h"
 
 @interface ComposeTweetViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *composedTweetMessage;
+@property (weak, nonatomic) IBOutlet UILabel *characterCount;
 - (IBAction)closeCompose:(id)sender;
 - (IBAction)tweetComposedMessage:(id)sender;
 
@@ -21,6 +23,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.composedTweetMessage.delegate = self;
+    self.characterCount.text = [NSString stringWithFormat:@"%lu / 140", (unsigned long)self.composedTweetMessage.text.length];
+    
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    // Set the max character limit
+    int characterLimit = 140;
+
+    // Construct what the new text would be if we allowed the user's latest edit
+    NSString *newText = [self.composedTweetMessage.text stringByReplacingCharactersInRange:range withString:text];
+
+    // Update character count label
+    self.characterCount.text = [NSString stringWithFormat:@"%lu / %u", (unsigned long)newText.length, characterLimit];
+
+    // Should the new text should be allowed? True/False
+    return newText.length < characterLimit;
 }
 
 /*

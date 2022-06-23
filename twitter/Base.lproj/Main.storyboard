@@ -464,17 +464,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What's happening?" translatesAutoresizingMaskIntoConstraints="NO" id="LMG-X2-NGS">
-                                <rect key="frame" x="20" y="88" width="374" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's happening?" translatesAutoresizingMaskIntoConstraints="NO" id="LMG-X2-NGS">
+                                <rect key="frame" x="20" y="76" width="374" height="266"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 140" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Il9-KV-j2F">
+                                <rect key="frame" x="294" y="362" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hyQ-V4-m9O"/>
+                                    <constraint firstAttribute="height" constant="20" id="iBD-ge-d9b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aow-y2-4wj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Il9-KV-j2F" firstAttribute="top" secondItem="LMG-X2-NGS" secondAttribute="bottom" constant="20" id="AIx-tA-FAh"/>
+                            <constraint firstItem="LMG-X2-NGS" firstAttribute="leading" secondItem="aow-y2-4wj" secondAttribute="leading" constant="20" id="SfX-nD-meB"/>
+                            <constraint firstItem="Il9-KV-j2F" firstAttribute="trailing" secondItem="LMG-X2-NGS" secondAttribute="trailing" id="YQf-yh-L4x"/>
+                            <constraint firstItem="aow-y2-4wj" firstAttribute="bottom" secondItem="LMG-X2-NGS" secondAttribute="bottom" constant="500" id="aAg-vU-FuB"/>
+                            <constraint firstItem="aow-y2-4wj" firstAttribute="trailing" secondItem="LMG-X2-NGS" secondAttribute="trailing" constant="20" id="om2-s4-sUy"/>
+                            <constraint firstItem="LMG-X2-NGS" firstAttribute="top" secondItem="aow-y2-4wj" secondAttribute="top" constant="20" id="qRt-Bj-tbE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="25M-wB-DnN">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="close-icon" id="qDt-tQ-vIh">
@@ -489,6 +506,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="characterCount" destination="Il9-KV-j2F" id="vsI-vK-OMk"/>
                         <outlet property="composedTweetMessage" destination="LMG-X2-NGS" id="ZmY-gv-vYY"/>
                     </connections>
                 </viewController>
@@ -524,9 +542,6 @@
         <image name="reply-icon" width="30" height="30"/>
         <image name="retweet-icon" width="30" height="30"/>
         <image name="retweet-icon-green" width="30" height="30"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
