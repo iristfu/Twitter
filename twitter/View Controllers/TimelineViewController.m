@@ -63,6 +63,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+// refered to https://stackoverflow.com/questions/7706152/check-if-a-uiscrollview-reached-the-top-or-bottom
+-(void)scrollViewDidScroll: (UIScrollView*)scrollView {
+    float scrollViewHeight = scrollView.frame.size.height;
+    float scrollContentSizeHeight = scrollView.contentSize.height;
+    float scrollOffset = scrollView.contentOffset.y;
+
+    if (scrollOffset + scrollViewHeight == scrollContentSizeHeight) { // at the bottom of the scrollview
+        [self loadMoreTweets];
+    }
+}
+
+-(void)loadMoreTweets{
+    Tweet *lastTweet = [self.arrayOfTweets lastObject];
+    [[APIManager shared] getHomeTimelineOlderThanID:lastTweet.idStr completion:^(NSArray *moreTweets, NSError *error) {
+        if (moreTweets) {
+            for (Tweet *tweet in moreTweets) {
+                [self.arrayOfTweets addObject:tweet];
+            }
+            [self.twitterFeedTableView reloadData];
+        } else {
+            NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
+        }
+    }];
+}
+
 
 #pragma mark - Navigation
 
