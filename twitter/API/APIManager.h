@@ -24,5 +24,6 @@
 - (void)unretweet:(Tweet *)tweet completion:(void (^)(Tweet *, NSError *))completion;
 - (void)postReply:(NSString *)text :(NSString *)id_existing_tweet completion:(void (^)(Tweet *, NSError *))completion;
 - (void)getHomeTimelineOlderThanID:(NSString *)idStr completion:(void(^)(NSArray *tweets, NSError *error))completion;
+- (void)getAccountDetails:(void(^)(User *user, NSError *error))completion;
 
 @end
