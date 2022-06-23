@@ -11,6 +11,19 @@
 #import "UIImageView+AFNetworking.h"
 
 @implementation TweetCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    // Initialization code
+     UITapGestureRecognizer *profileTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapUserProfile:)];
+    [self.profilePicture addGestureRecognizer:profileTapGestureRecognizer];
+    [self.profilePicture setUserInteractionEnabled:YES];
+}
+
+- (void) didTapUserProfile:(UITapGestureRecognizer *)sender {
+    [self.delegate tweetCell:self didTap:self.tweet.user];
+}
+
 - (IBAction)didTapFavorite:(id)sender {
     // Update the local tweet model
     if (self.tweet.favorited) { // user is unliking the tweet
