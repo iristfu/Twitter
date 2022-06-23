@@ -21,6 +21,7 @@
         // Send a POST request to the POST unfavorite endpoint
         [[APIManager shared] unfavorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
              if (error) {
+                  self.tweet.favoriteCount++; // revert
                   NSLog(@"Error unfavoriting tweet: %@", error.localizedDescription);
              }
              else {
@@ -35,6 +36,7 @@
         // Send a POST request to the POST favorite endpoint
         [[APIManager shared] favorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
              if (error) {
+                  self.tweet.favoriteCount--; // revert
                   NSLog(@"Error favoriting tweet: %@", error.localizedDescription);
              }
              else {
@@ -58,6 +60,7 @@
         // Send a POST request to the POST unretweet endpoint
         [[APIManager shared] unretweet:self.tweet completion:^(Tweet *tweet, NSError *error) {
             if (error) {
+                 self.tweet.retweetCount++; // revert
                  NSLog(@"Error unretweeting tweet: %@", error.localizedDescription);
             }
             else {
@@ -72,6 +75,7 @@
         // Send a POST request to the POST retweet endpoint
         [[APIManager shared] retweet:self.tweet completion:^(Tweet *tweet, NSError *error) {
             if (error) {
+                self.tweet.retweetCount--; // revert
                  NSLog(@"Error retweeting tweet: %@", error.localizedDescription);
             }
             else {
