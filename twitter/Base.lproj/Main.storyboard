@@ -471,7 +471,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's happening?" translatesAutoresizingMaskIntoConstraints="NO" id="LMG-X2-NGS">
-                                <rect key="frame" x="20" y="76" width="374" height="266"/>
+                                <rect key="frame" x="20" y="90.5" width="374" height="251.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -487,16 +487,25 @@
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replying to @" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAe-jV-OBK">
+                                <rect key="frame" x="20" y="66" width="374" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aow-y2-4wj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZAe-jV-OBK" firstAttribute="top" secondItem="aow-y2-4wj" secondAttribute="top" constant="10" id="9fn-lx-ffV"/>
                             <constraint firstItem="Il9-KV-j2F" firstAttribute="top" secondItem="LMG-X2-NGS" secondAttribute="bottom" constant="20" id="AIx-tA-FAh"/>
                             <constraint firstItem="LMG-X2-NGS" firstAttribute="leading" secondItem="aow-y2-4wj" secondAttribute="leading" constant="20" id="SfX-nD-meB"/>
                             <constraint firstItem="Il9-KV-j2F" firstAttribute="trailing" secondItem="LMG-X2-NGS" secondAttribute="trailing" id="YQf-yh-L4x"/>
                             <constraint firstItem="aow-y2-4wj" firstAttribute="bottom" secondItem="LMG-X2-NGS" secondAttribute="bottom" constant="500" id="aAg-vU-FuB"/>
+                            <constraint firstItem="ZAe-jV-OBK" firstAttribute="leading" secondItem="LMG-X2-NGS" secondAttribute="leading" id="aWq-2c-xKE"/>
+                            <constraint firstItem="ZAe-jV-OBK" firstAttribute="trailing" secondItem="LMG-X2-NGS" secondAttribute="trailing" id="oYm-IO-MrJ"/>
                             <constraint firstItem="aow-y2-4wj" firstAttribute="trailing" secondItem="LMG-X2-NGS" secondAttribute="trailing" constant="20" id="om2-s4-sUy"/>
-                            <constraint firstItem="LMG-X2-NGS" firstAttribute="top" secondItem="aow-y2-4wj" secondAttribute="top" constant="20" id="qRt-Bj-tbE"/>
+                            <constraint firstItem="LMG-X2-NGS" firstAttribute="top" secondItem="ZAe-jV-OBK" secondAttribute="bottom" constant="10" id="zSY-pr-lzf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="25M-wB-DnN">
@@ -514,6 +523,7 @@
                     <connections>
                         <outlet property="characterCount" destination="Il9-KV-j2F" id="vsI-vK-OMk"/>
                         <outlet property="composedTweetMessage" destination="LMG-X2-NGS" id="ZmY-gv-vYY"/>
+                        <outlet property="replyingToLabel" destination="ZAe-jV-OBK" id="uGg-ye-kPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J29-Ih-zxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
