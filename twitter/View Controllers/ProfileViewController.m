@@ -56,6 +56,9 @@
         [[APIManager shared] getAccountDetails:^(User *user, NSError *error) {
             if (user) {
                 self.user = user;
+                // need the following code here as well because APIManager creates a diff thread
+                NSLog(@"Got user details");
+                [self displayUserProfile];
             } else {
                 NSLog(@"😫😫😫 Error getting account details: %@", error.localizedDescription);
             }
