@@ -36,7 +36,7 @@ The following **stretch** features are implemented:
 - [x] Click on a Profile image to reveal another user's profile page, including:
   - Header view: picture and tagline
   - Basic stats: #tweets, #following, #followers
-- [ ] Switch between **timeline**, **mentions**, or **profile view** through a tab bar (**3 points**)
+- [x] Switch between **timeline**, **mentions**, or **profile view** through a tab bar (**3 points**)
 - [ ] Profile Page: pulling down the profile page should blur and resize the header image. (**4 points**)
 
 The following **additional** features are implemented:
@@ -80,7 +80,10 @@ Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-7-profile-view.gif' title='Icon, launchscreen, login, feed' width='300' alt='Icon, launchscreen, login, feed' />
 
+**Profiles tab, mentions tab, and the tab bar controller to switch between home, mentions, and user profile**
 
+<img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-8-profile-tab.gif' title='Icon, launchscreen, login, feed' width='300' alt='Icon, launchscreen, login, feed' />
+<img src='https://github.com/iristfu/Twitter/blob/main/twitter-demo-9-mentions-tab.gif' title='Icon, launchscreen, login, feed' width='300' alt='Icon, launchscreen, login, feed' />
 
 GIF created with [Kap](https://getkap.co/).
 
