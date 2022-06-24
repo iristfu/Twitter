@@ -188,4 +188,15 @@ static NSString * const baseURLString = @"https://api.twitter.com";
    }];
 }
 
+- (void)getMentions:(void(^) (NSMutableArray *tweets, NSError *error) )completion {
+    [self GET:@"1.1/statuses/mentions_timeline.json"
+   parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray *  _Nullable tweetDictionaries) {
+        NSMutableArray *tweets  = [Tweet tweetsWithArray:tweetDictionaries];
+        completion(tweets, nil);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        completion(nil, error);
+    }];
+}
+
+
 @end
